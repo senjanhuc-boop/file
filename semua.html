@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEMUA MATERI - HACKER BAIK</title>
+<style>
+body{background:black;color:#00ff00;font-family:monospace;padding:15px}
+h1{text-align:center}
+h2{color:white;border-bottom:2px solid #00ff00;padding-bottom:5px;margin-top:35px}
+.kotak{border:1px solid #00ff00;padding:15px;margin:12px 0;border-radius:10px}
+pre{background:#111;color:#00ff00;padding:12px;white-space:pre-wrap;border:1px solid #333}
+.fungsi{background:#003300;padding:10px;border-radius:6px}
+button{background:#00ff00;color:black;font-size:17px;padding:12px;border:none;font-weight:bold;width:100%;margin-top:10px}
+</style>
+</head>
+<body>
+<h1>💻 SEMUA MATERI HACKER BAIK 💻</h1>
+<p style="text-align:center"><a href="index.html"><button>GAME</button></a></p>
+
+<div class="kotak">
+<h2>📚 BAGIAN 1: BELAJAR KODE</h2>
+<p><b>1. Variabel = Kotak</b></p>
+<pre>nama = "Budi"
+umur = 15
+print(nama)</pre>
+<div class="fungsi">FUNGSI: Nyimpen data. nama nyimpen teks, umur nyimpen angka.</div>
+<p><b>2. if / else = Cek Password</b></p>
+<pre>password = input("Password: ")
+if password == "rahasia":
+    print("BENER! Selamat datang BOSS!")
+else:
+    print("SALAH!")</pre>
+<div class="fungsi">FUNGSI: Buat keputusan. Ini fondasi LOGIN semua website! input()=nanya, == = apakah sama?, if=kalau bener, else=kalau salah</div>
+<p><b>3. for = Ulang 3x</b></p>
+<pre>for i in range(3):
+    print("Halo!")</pre>
+<div class="fungsi">FUNGSI: Ulang yang udah pasti jumlahnya. range(3)=3x ulang.</div>
+<p><b>4. while True = Ulang Terus</b></p>
+<pre>import random
+rahasia = random.randint(1,10)
+while True:
+    tebak = int(input("Tebak: "))
+    if tebak == rahasia:
+        print("MENANG!")
+        break
+    elif tebak < rahasia:
+        print("KECILAN!")
+    else:
+        print("KEGEDEAN!")</pre>
+<div class="fungsi">FUNGSI: Ulang terus sampe break. Ini fondasi BRUTE FORCE! break=BERHENTI, elif=cek kedua.</div>
+<p><b>5. List = Daftar</b></p>
+<pre>teman = ["Andi","Budi","Cici"]
+print(teman[0])
+teman.append("Dedi")</pre>
+<div class="fungsi">FUNGSI: Nyimpen banyak data. [0] itu yang pertama. append()=nambahin.</div>
+<p><b>6. def = Bikin Perintah Sendiri</b></p>
+<pre>def sapa(nama):
+    print("Halo", nama)
+sapa("Budi")</pre>
+<div class="fungsi">FUNGSI: Biar gak ngetik ulang. Tinggal panggil namanya.</div>
+<p><b>7. len() = Ngitung Panjang</b></p>
+<pre>password = "rahasia123"
+print(len(password))</pre>
+<div class="fungsi">FUNGSI: Ngitung jumlah huruf. Hacker pake buat cek panjang password.</div>
+</div>
+
+<div class="kotak">
+<h2>💻 BAGIAN 2: TERMINAL - pwd, cd, dir</h2>
+<p><b>CARA BUKA:</b> HP = Aplikasi Termux. Laptop Windows = Windows+R ketik cmd.</p>
+<p><b>pwd = Gue dimana?</b></p>
+<pre>pwd</pre>
+<div class="fungsi">Nunjukin lu lagi di folder mana. Contoh: /home/budi</div>
+<p><b>ls / dir = Liat isi folder</b></p>
+<pre>ls
+dir</pre>
+<div class="fungsi">ls = Linux/Termux, dir = Windows. Fungsinya sama: liat apa aja di folder ini. ls -a = liat semua termasuk yang disembunyiin</div>
+<p><b>cd = Pindah Folder (PALING PENTING!)</b></p>
+<pre>cd Documents
+cd ..
+cd ../..
+cd /
+cd ~</pre>
+<div class="fungsi">cd Documents=Masuk Documents, cd ..=Mundur 1 langkah, cd ../..=Mundur 2 langkah, cd /=Balik ke paling awal, cd ~=Balik ke Home</div>
+<p><b>mkdir = Bikin Folder</b></p>
+<pre>mkdir game-baru</pre>
+<div class="fungsi">Bikin folder baru namanya game-baru</div>
+<p><b>touch / echo = Bikin File</b></p>
+<pre>touch catatan.txt
+echo "Halo Hacker" > halo.txt</pre>
+<div class="fungsi">touch=bikin file kosong. echo > = bikin file + isi.</div>
+<p><b>cat / type = Baca File</b></p>
+<pre>cat halo.txt
+type halo.txt</pre>
+<div class="fungsi">cat=Linux, type=Windows. Buat baca isi file.</div>
+<p><b>rm / del = Hapus (HATI-HATI!)</b></p>
+<pre>rm halo.txt
+rm -r game-baru
+del halo.txt</pre>
+<div class="fungsi">rm=hapus file, rm -r=hapus folder + isinya, del=Windows. Kalau udah dihapus gak bisa balik!</div>
+<p><b>cp / mv = Copy / Pindah</b></p>
+<pre>cp halo.txt halo2.txt
+mv halo.txt nama-baru.txt</pre>
+<div class="fungsi">cp=copy, mv=pindah/ganti nama. Di Windows: copy dan move.</div>
+<p><b>clear / cls = Bersihin Layar</b></p>
+<pre>clear
+cls</pre>
+<div class="fungsi">clear=Linux, cls=Windows.</div>
+<p><b>LATIHAN TERMINAL:</b></p>
+<pre>pwd
+ls
+mkdir latihan1
+cd latihan1
+echo "Gue Hacker Baik" > rahasia.txt
+cat rahasia.txt
+cd ..
+rm -r latihan1</pre>
+<div class="fungsi">Kalau lu bisa lakuin ini tanpa contekan, lu LULUS Terminal Level 1!</div>
+</div>
+
+<div class="kotak">
+<h2>🌐 BAGIAN 3: JARINGAN - ipconfig, ping, netstat</h2>
+<p><b>IP = Alamat rumah di internet.</b> Contoh: 192.168.1.5=HP lu, 192.168.1.1=Router WiFi lu, 8.8.8.8=Google, 127.0.0.1=Diri sendiri.</p>
+<p><b>ipconfig = Liat KTP Internet Lu</b></p>
+<pre>ipconfig
+ipconfig /all
+ifconfig</pre>
+<div class="fungsi">ipconfig=Windows, ifconfig/ip a=Linux/Termux. Cari: IPv4 Address=IP lu, Default Gateway=IP Router lu.</div>
+<p><b>ping = Teriak HALO! Dibales gak?</b></p>
+<pre>ping google.com
+ping 8.8.8.8
+ping 192.168.1.1</pre>
+<div class="fungsi">Reply time=15ms=BERHASIL! Makin kecil makin cepet. Request timed out=GAGAL! ATURAN: Ping Router dulu. Kalau ke Router gagal, WiFi lu yang rusak. Kalau ke Router berhasil tapi ke Google gagal, internetnya yang mati.</div>
+<p><b>netstat = Siapa aja yang nyambung?</b></p>
+<pre>netstat
+netstat -an</pre>
+<div class="fungsi">LISTENING=Lagi nunggu. ESTABLISHED=Udah nyambung, lagi ngobrol. Kalau ada ESTABLISHED ke IP aneh yang lu gak kenal, waspada!</div>
+<p><b>tracert = Lewat jalan mana?</b></p>
+<pre>tracert google.com
+traceroute google.com</pre>
+<div class="fungsi">tracert=Windows, traceroute=Linux. Nunjukin paket lu lewat mana aja sampe ke Google.</div>
+<p><b>nslookup = Nanya IP nya Google</b></p>
+<pre>nslookup google.com</pre>
+<div class="fungsi">Nanya ke DNS: google.com itu IP berapa? DNS=Buku telepon internet.</div>
+<p><b>arp -a = Siapa aja di WiFi gue?</b></p>
+<pre>arp -a</pre>
+<div class="fungsi">Liat semua HP yang nyambung ke WiFi yang sama. Kalau ada yang gak kenal, bisa jadi ada yang numpang WiFi!</div>
+<p><b>LATIHAN JARINGAN:</b></p>
+<pre>ipconfig
+ping 192.168.1.1
+ping google.com
+netstat -an
+arp -a</pre>
+<div class="fungsi">1.Cek IP gue -> 2.Router nyambung gak? -> 3.Google nyambung gak? -> 4.Siapa aja yang nyambung? -> 5.Siapa aja di WiFi gue?</div>
+<p><b>ATURAN HACKER BAIK:</b> Boleh cek jaringan LU SENDIRI. JANGAN pernah nyerang WiFi orang lain tanpa izin!</p>
+</div>
+
+<p style="text-align:center;font-weight:bold">LU UDAH BISA SEMUA BANG! 🔥</p>
+<a href="index.html"><button>MAIN GAME LAGI</button></a>
+</body>
+</html>
